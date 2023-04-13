@@ -149,6 +149,15 @@ git push --set-upstream origin patch2
 - [x] 5. Убедитесь, что в pull-request появились *конфликтны*.
 - [x] 6. Для этого локально выполните **pull** + **rebase** (точную последовательность команд, следует узнать самостоятельно). **Исправьте конфликты**.
  ```
+ git pull
+edit hello_world.cpp
+git add .
+git commit -m"fix"
+git rebase master
+edit hello_world.cpp
+git add .
+git rebase --continue
+git pull origin master
  ```
 - [x] 7. Сделайте *force push* в ветку `patch2`
  ```sh
